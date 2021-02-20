@@ -1,5 +1,4 @@
 using System.Net;
-using System.Net.Mime;
 using DeckOfCards.Client.Responses;
 
 namespace DeckOfCards.Client.Builders
