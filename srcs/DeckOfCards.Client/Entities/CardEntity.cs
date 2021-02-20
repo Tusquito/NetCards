@@ -6,6 +6,9 @@ using Newtonsoft.Json.Converters;
 
 namespace DeckOfCards.Client.Entities
 {
+    /// <summary>
+    /// A comparable card entity returned by the API
+    /// </summary>
     public class CardEntity : IComparable
     {
         [JsonProperty("image")] 
@@ -42,7 +45,7 @@ namespace DeckOfCards.Client.Entities
                 return 1;
             }
 
-            return ComparableExtensions.IntegerComparisonResult((int) Enum.Parse<SpecialCardValues>(Value), (int) Enum.Parse<SpecialCardValues>(entity.Value));
+            return ComparableExtensions.IntegerComparisonResult((int) Enum.Parse<SpecialCardValue>(Value), (int) Enum.Parse<SpecialCardValue>(entity.Value));
         }
     }
 }

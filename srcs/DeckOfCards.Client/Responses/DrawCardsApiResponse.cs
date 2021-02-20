@@ -4,6 +4,9 @@ using Newtonsoft.Json;
 
 namespace DeckOfCards.Client.Responses
 {
+    /// <summary>
+    /// Draw card API call response
+    /// </summary>
     public class DrawCardsApiResponse : DefaultApiResponse
     {
         [JsonProperty("cards")] 

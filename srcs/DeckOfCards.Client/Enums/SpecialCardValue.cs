@@ -1,6 +1,9 @@
 namespace DeckOfCards.Client.Enums
 {
-    public enum SpecialCardValues
+    /// <summary>
+    /// Non integer card values
+    /// </summary>
+    public enum SpecialCardValue
     {
         JACK = 0,
         QUEEN = 1,
