@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace DeckOfCards.Api.Responses
+namespace DeckOfCards.Client.Api.Responses
 {
     /// <summary>
     /// Useful properties common to any API call response

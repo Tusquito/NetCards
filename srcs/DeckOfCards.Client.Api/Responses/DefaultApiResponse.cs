@@ -1,7 +1,7 @@
 using System.Net;
 using Newtonsoft.Json;
 
-namespace DeckOfCards.Api.Responses
+namespace DeckOfCards.Client.Api.Responses
 {
     /// <summary>
     /// Base response of any API call

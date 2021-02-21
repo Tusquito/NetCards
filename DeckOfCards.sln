@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards.Api", "srcs\DeckOfCards.Api\DeckOfCards.Api.csproj", "{102E027B-17E2-4116-BBC3-E24CE46BABF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards.Client.Api", "srcs\DeckOfCards.Client.Api\DeckOfCards.Client.Api.csproj", "{102E027B-17E2-4116-BBC3-E24CE46BABF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards.Game", "srcs\DeckOfCards.Game\DeckOfCards.Game.csproj", "{E0048823-D2BA-43BC-895A-79A112CC605D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards.Client.Game", "srcs\DeckOfCards.Client.Game\DeckOfCards.Client.Game.csproj", "{E0048823-D2BA-43BC-895A-79A112CC605D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards.Tests", "srcs\DeckOfCards.Tests\DeckOfCards.Tests.csproj", "{77FBCAFB-0500-4BD0-BEB1-180E47589781}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards.Client.Tests", "srcs\DeckOfCards.Client.Tests\DeckOfCards.Client.Tests.csproj", "{77FBCAFB-0500-4BD0-BEB1-180E47589781}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

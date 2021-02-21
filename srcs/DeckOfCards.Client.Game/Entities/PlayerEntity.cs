@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using DeckOfCards.Api.Entities;
+using DeckOfCards.Client.Api.Entities;
 
-namespace DeckOfCards.Game.Entities
+namespace DeckOfCards.Client.Game.Entities
 {
     public class PlayerEntity
     {

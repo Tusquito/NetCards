@@ -1,8 +1,8 @@
 using System;
-using DeckOfCards.Api.Enums;
-using DeckOfCards.Game.Entities;
+using DeckOfCards.Client.Api.Enums;
+using DeckOfCards.Client.Game.Entities;
 
-namespace DeckOfCards.Game.Extensions
+namespace DeckOfCards.Client.Game.Extensions
 {
     public static class PlayerExtensions
     {

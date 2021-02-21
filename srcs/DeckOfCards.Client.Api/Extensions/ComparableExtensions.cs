@@ -1,4 +1,4 @@
-namespace DeckOfCards.Api.Extensions
+namespace DeckOfCards.Client.Api.Extensions
 {
     public static class ComparableExtensions
     {

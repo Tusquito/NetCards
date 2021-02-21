@@ -1,4 +1,4 @@
-namespace DeckOfCards.Game.Entities
+namespace DeckOfCards.Client.Game.Entities
 {
     public class DeckConfiguration
     {
