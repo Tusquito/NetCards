@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using DeckOfCards.Client.Builders;
-using DeckOfCards.Client.Enums;
-using DeckOfCards.Client.Extensions;
-using DeckOfCards.Client.Responses;
+using DeckOfCards.Api.Builders;
+using DeckOfCards.Api.Extensions;
+using DeckOfCards.Api.Responses;
 using Newtonsoft.Json;
 
-namespace DeckOfCards.Client
+namespace DeckOfCards.Api
 {    /// <summary>
      /// Main class that allows to proceed all API calls
      /// </summary>
@@ -112,11 +110,10 @@ namespace DeckOfCards.Client
         /// </summary>
         /// <param name="cardsCodes">A couple (value, SuitType) where value is between 2-10 and A, J, Q, K</param>
         /// <returns>The shuffle response class</returns>
-        public async Task<ShuffleDeckApiResponse> CreateNewPartialDeckAsync(IEnumerable<(char, SuitType)> cardsCodes)
+        public async Task<ShuffleDeckApiResponse> CreateNewPartialDeckAsync(IEnumerable<string> cardsCodes)
         {
-            var routeParam = cardsCodes.Aggregate("", (x, y) => $"{x},{y.Item1}{y.Item2.ToString().Take(1)}");
             var response =
-                await HttpClient.GetAsync(string.Format(ApiRouteExtensions.NEW_PARTIAL_DECK_ROUTE, routeParam));
+                await HttpClient.GetAsync(string.Format(ApiRouteExtensions.NEW_PARTIAL_DECK_ROUTE, string.Join(',', cardsCodes)));
             try
             {
                 response.EnsureSuccessStatusCode();

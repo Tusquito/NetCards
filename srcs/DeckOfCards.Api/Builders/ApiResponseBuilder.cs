@@ -1,7 +1,7 @@
 using System.Net;
-using DeckOfCards.Client.Responses;
+using DeckOfCards.Api.Responses;
 
-namespace DeckOfCards.Client.Builders
+namespace DeckOfCards.Api.Builders
 {
     /// <summary>
     /// API response builder that allows to add StatusCode & ResponseMessage parameters easily

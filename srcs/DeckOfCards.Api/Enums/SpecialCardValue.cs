@@ -1,4 +1,4 @@
-namespace DeckOfCards.Client.Enums
+namespace DeckOfCards.Api.Enums
 {
     /// <summary>
     /// Non integer card values

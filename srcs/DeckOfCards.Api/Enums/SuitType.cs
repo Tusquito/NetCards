@@ -1,4 +1,4 @@
-namespace DeckOfCards.Client.Enums
+namespace DeckOfCards.Api.Enums
 {
     /// <summary>
     /// Suit type returned by the API
@@ -6,7 +6,7 @@ namespace DeckOfCards.Client.Enums
     public enum SuitType
     {
         HEARTS,
-        DIAMONGS,
+        DIAMONDS,
         SPADES,
         CLUBS
     }

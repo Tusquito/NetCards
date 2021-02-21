@@ -1,10 +1,10 @@
 using System;
-using DeckOfCards.Client.Enums;
-using DeckOfCards.Client.Extensions;
+using DeckOfCards.Api.Enums;
+using DeckOfCards.Api.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace DeckOfCards.Client.Entities
+namespace DeckOfCards.Api.Entities
 {
     /// <summary>
     /// A comparable card entity returned by the API
