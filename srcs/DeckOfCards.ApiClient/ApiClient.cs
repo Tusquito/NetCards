@@ -10,7 +10,9 @@ using DeckOfCards.Client.Responses;
 using Newtonsoft.Json;
 
 namespace DeckOfCards.Client
-{
+{    /// <summary>
+     /// Main class that allows to proceed all API calls
+     /// </summary>
     public class ApiClient
     {
         private static readonly HttpClient HttpClient = new();
@@ -19,7 +21,12 @@ namespace DeckOfCards.Client
         {
             HttpClient.BaseAddress = new Uri(ApiRouteExtensions.BASE_ROUTE);
         }
-
+        /// <summary>
+        /// Create a new deck from the API 
+        /// </summary>
+        /// <param name="deckCount">The count of deck (52 cards) this deck has to contain</param>
+        /// <param name="jokersEnabled">If the jokers are enabled or not</param>
+        /// <returns></returns>
         public async Task<ShuffleDeckApiResponse> CreateNewDeckAsync(int deckCount = 1, bool jokersEnabled = true)
         {
             var response = await HttpClient.GetAsync(string.Format(ApiRouteExtensions.NEW_DECK_ROUTE, deckCount, jokersEnabled.ToString().ToLower()));
@@ -43,7 +50,11 @@ namespace DeckOfCards.Client
                 };
             }
         }
-
+        /// <summary>
+        /// Shuffle an API deck
+        /// </summary>
+        /// <param name="deckId">The deck's id returned by the API at it creation</param>
+        /// <returns>The shuffle response class returned by the API</returns>
         public async Task<ShuffleDeckApiResponse> ShuffleDeckAsync(string deckId)
         {
             var response = await HttpClient.GetAsync(string.Format(ApiRouteExtensions.SHUFFLE_DECK_ROUTE, deckId));
@@ -67,7 +78,12 @@ namespace DeckOfCards.Client
                 };
             }
         }
-        
+        /// <summary>
+        /// Draw card from an API deck
+        /// </summary>
+        /// <param name="deckId">The deck's id returned by the API at it creation</param>
+        /// <param name="amount">The amount of card to draw</param>
+        /// <returns>The draw response class</returns>
         public async Task<DrawCardsApiResponse> DrawCardsAsync(string deckId, int amount = 1)
         {
             var response = await HttpClient.GetAsync(string.Format(ApiRouteExtensions.DRAW_CARD_ROUTE, deckId, amount));
@@ -91,7 +107,11 @@ namespace DeckOfCards.Client
                 };
             }
         }
-
+        /// <summary>
+        /// Create new partial deck from the API
+        /// </summary>
+        /// <param name="cardsCodes">A couple (value, SuitType) where value is between 2-10 and A, J, Q, K</param>
+        /// <returns>The shuffle response class</returns>
         public async Task<ShuffleDeckApiResponse> CreateNewPartialDeckAsync(IEnumerable<(char, SuitType)> cardsCodes)
         {
             var routeParam = cardsCodes.Aggregate("", (x, y) => $"{x},{y.Item1}{y.Item2.ToString().Take(1)}");
