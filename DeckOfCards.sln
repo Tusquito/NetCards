@@ -1,6 +1,6 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards.Client", "srcs\DeckOfCards.Client\DeckOfCards.Client.csproj", "{102E027B-17E2-4116-BBC3-E24CE46BABF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards.ApiClient", "srcs\DeckOfCards.ApiClient\DeckOfCards.ApiClient.csproj", "{102E027B-17E2-4116-BBC3-E24CE46BABF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
