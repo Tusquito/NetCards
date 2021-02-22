@@ -5,12 +5,12 @@ namespace NetCards.Client.Tests
 {
     internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             MainAsync(args).GetAwaiter().GetResult();
         }
 
-        static async Task MainAsync(string[] args)
+        private static async Task MainAsync(string[] args)
         {
             GameClient gameClient = new GameClient(3, 3, false);
             await gameClient.DrawCardToPlayerAsync(1, 10);

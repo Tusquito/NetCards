@@ -43,7 +43,7 @@ namespace NetCards.Client.Game
         {
             if (IsPlayerIndexValid(playerIndex))
             {
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException(nameof(playerIndex));
             }
             await CheckDeckValidityAsync();
             var response = await _netCardsClient.DrawCardsAsync(_deckConfiguration.DeckId, cardCount);
@@ -60,7 +60,7 @@ namespace NetCards.Client.Game
         {
             if (IsPlayerIndexValid(playerIndex))
             {
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException(nameof(playerIndex));
             }
             _players[playerIndex].Cards.Clear();
         }
@@ -69,7 +69,7 @@ namespace NetCards.Client.Game
         {
             if (IsPlayerIndexValid(playerIndex))
             {
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException(nameof(playerIndex));
             }
             return _players[playerIndex].GetPlayerCardsSum(isBlackJack);
         }
@@ -78,7 +78,7 @@ namespace NetCards.Client.Game
         {
             if (IsPlayerIndexValid(playerIndex))
             {
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException(nameof(playerIndex));
             }
             return _players[playerIndex].Cards;
         }

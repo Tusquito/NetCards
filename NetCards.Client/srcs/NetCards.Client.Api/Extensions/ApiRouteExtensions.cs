@@ -3,7 +3,7 @@ namespace NetCards.Client.Api.Extensions
     /// <summary>
     /// Provide all the API routes that can be reached
     /// </summary>
-    public class ApiRouteExtensions
+    public static class ApiRouteExtensions
     {
         public const string BASE_ROUTE = "https://deckofcardsapi.com/api/deck/";
         public const string DRAW_CARD_ROUTE = "{0}/draw/?count={1}";
