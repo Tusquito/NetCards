@@ -11,11 +11,11 @@ namespace NetCards.Client.Api
 {    /// <summary>
      /// Main class that allows to proceed all API calls
      /// </summary>
-    public class ApiClient
+    public class NetCardsClient
     {
         private static readonly HttpClient HttpClient = new();
 
-        public ApiClient()
+        public NetCardsClient()
         {
             HttpClient.BaseAddress = new Uri(ApiRouteExtensions.BASE_ROUTE);
         }
