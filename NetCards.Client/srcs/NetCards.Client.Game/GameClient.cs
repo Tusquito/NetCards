@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using DeckOfCards.Client.Api;
-using DeckOfCards.Client.Game.Entities;
-using DeckOfCards.Client.Game.Extensions;
+using NetCards.Client.Api;
+using NetCards.Client.Game.Entities;
+using NetCards.Client.Game.Extensions;
 
-namespace DeckOfCards.Client.Game
+namespace NetCards.Client.Game
 {
     public class GameClient
     {

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using DeckOfCards.Client.Api.Builders;
-using DeckOfCards.Client.Api.Extensions;
-using DeckOfCards.Client.Api.Responses;
+using NetCards.Client.Api.Builders;
+using NetCards.Client.Api.Extensions;
+using NetCards.Client.Api.Responses;
 using Newtonsoft.Json;
 
-namespace DeckOfCards.Client.Api
+namespace NetCards.Client.Api
 {    /// <summary>
      /// Main class that allows to proceed all API calls
      /// </summary>

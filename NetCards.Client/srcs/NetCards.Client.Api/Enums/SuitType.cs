@@ -1,4 +1,4 @@
-namespace DeckOfCards.Client.Api.Enums
+namespace NetCards.Client.Api.Enums
 {
     /// <summary>
     /// Suit type returned by the API

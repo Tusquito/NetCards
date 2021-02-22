@@ -1,4 +1,4 @@
-namespace DeckOfCards.Client.Api.Extensions
+namespace NetCards.Client.Api.Extensions
 {
     /// <summary>
     /// Provide all the API routes that can be reached

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using DeckOfCards.Client.Api.Entities;
+using NetCards.Client.Api.Entities;
 using Newtonsoft.Json;
 
-namespace DeckOfCards.Client.Api.Responses
+namespace NetCards.Client.Api.Responses
 {
     /// <summary>
     /// Draw card API call response

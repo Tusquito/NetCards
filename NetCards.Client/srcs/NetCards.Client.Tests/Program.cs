@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using DeckOfCards.Client.Game;
+using NetCards.Client.Game;
 
-namespace DeckOfCards.Client.Tests
+namespace NetCards.Client.Tests
 {
     internal static class Program
     {

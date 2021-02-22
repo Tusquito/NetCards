@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace DeckOfCards.Client.Api.Responses
+namespace NetCards.Client.Api.Responses
 {
     /// <summary>
     /// Deck shuffle API call response
