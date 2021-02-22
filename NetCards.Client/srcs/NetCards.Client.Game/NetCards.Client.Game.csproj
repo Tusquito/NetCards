@@ -3,11 +3,11 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <LangVersion>9</LangVersion>
-        <RootNamespace>DeckOfCards.Client.Api</RootNamespace>
+        <RootNamespace>NetCards.Client.Game</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+      <ProjectReference Include="..\NetCards.Client.Api\NetCards.Client.Api.csproj" />
     </ItemGroup>
 
 </Project>
