@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCards.Client", "NetCards.Client", "{682BD492-1B6C-49BB-934B-7A5F1FCD4487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCards.Client.Api", "NetCards.Client\srcs\NetCards.Client.Api\NetCards.Client.Api.csproj", "{AE660898-5B12-49B0-BDD8-9CE969D310B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCards.Client.Game", "NetCards.Client\srcs\NetCards.Client.Game\NetCards.Client.Game.csproj", "{A15396EB-ED18-4BCF-ACE8-BD5AC826A90F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCards.Client.Tests", "NetCards.Client\srcs\NetCards.Client.Tests\NetCards.Client.Tests.csproj", "{33028124-1094-4EF7-994A-B669C73C7370}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCards.Api", "NetCards.Api", "{3A315B69-7E72-4B08-ABB1-0259251289A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCards.Api.Core", "NetCards.Api\srcs\NetCards.Api.Core\NetCards.Api.Core.csproj", "{0E9ADDFB-4768-4CD5-ACA6-D9212C858641}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE660898-5B12-49B0-BDD8-9CE969D310B0} = {682BD492-1B6C-49BB-934B-7A5F1FCD4487}
+		{A15396EB-ED18-4BCF-ACE8-BD5AC826A90F} = {682BD492-1B6C-49BB-934B-7A5F1FCD4487}
+		{33028124-1094-4EF7-994A-B669C73C7370} = {682BD492-1B6C-49BB-934B-7A5F1FCD4487}
+		{0E9ADDFB-4768-4CD5-ACA6-D9212C858641} = {3A315B69-7E72-4B08-ABB1-0259251289A0}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE660898-5B12-49B0-BDD8-9CE969D310B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE660898-5B12-49B0-BDD8-9CE969D310B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE660898-5B12-49B0-BDD8-9CE969D310B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE660898-5B12-49B0-BDD8-9CE969D310B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A15396EB-ED18-4BCF-ACE8-BD5AC826A90F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A15396EB-ED18-4BCF-ACE8-BD5AC826A90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A15396EB-ED18-4BCF-ACE8-BD5AC826A90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A15396EB-ED18-4BCF-ACE8-BD5AC826A90F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33028124-1094-4EF7-994A-B669C73C7370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33028124-1094-4EF7-994A-B669C73C7370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33028124-1094-4EF7-994A-B669C73C7370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33028124-1094-4EF7-994A-B669C73C7370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9ADDFB-4768-4CD5-ACA6-D9212C858641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9ADDFB-4768-4CD5-ACA6-D9212C858641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9ADDFB-4768-4CD5-ACA6-D9212C858641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9ADDFB-4768-4CD5-ACA6-D9212C858641}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
