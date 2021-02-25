@@ -28,11 +28,9 @@ namespace NetCards.Client.Api.Entities
                 throw new InvalidCastException($"Can't cast {obj.GetType()} to {typeof(CardEntity)}");
             }
 
-            int firstValue, secondValue;
-            
-            if (int.TryParse(Value, out firstValue) && int.TryParse(entity.Value, out secondValue))
+            if (int.TryParse(Value, out var firstValue) && int.TryParse(entity.Value, out var secondValue))
             {
-                return ComparableExtensions.IntegerComparisonResult(firstValue, secondValue);
+                return firstValue.CompareTo(secondValue);
             }
 
             if (int.TryParse(Value, out firstValue) && !int.TryParse(entity.Value, out secondValue))
@@ -45,7 +43,7 @@ namespace NetCards.Client.Api.Entities
                 return 1;
             }
 
-            return ComparableExtensions.IntegerComparisonResult((int) Enum.Parse<SpecialCardValue>(Value), (int) Enum.Parse<SpecialCardValue>(entity.Value));
+            return ((int) Enum.Parse<SpecialCardValue>(Value)).CompareTo((int) Enum.Parse<SpecialCardValue>(entity.Value));
         }
     }
 }
