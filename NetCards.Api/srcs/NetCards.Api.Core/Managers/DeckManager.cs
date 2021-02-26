@@ -16,7 +16,7 @@ namespace NetCards.Api.Core.Managers
 
         public void AddOrUpdate(DeckInformation obj)
         {
-            _decks[obj.Key] = obj;
+            _decks[obj.Id] = obj;
         }
 
         public void Remove(string key)
@@ -42,9 +42,9 @@ namespace NetCards.Api.Core.Managers
 
     public class DeckInformation
     {
-        public string Key { get; init; }
+        public string Id { get; init; }
         public DateTime LastUpdate { get; set; }
-        public List<CardEntity> Cards { get; } = new();
+        public List<CardEntity> Cards { get; init; }
         public int RemainingCards => Cards.Count;
     }
 }
