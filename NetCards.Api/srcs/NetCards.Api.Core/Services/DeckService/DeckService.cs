@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NetCards.Api.Core.Entities;
 using NetCards.Api.Core.Enums;
+using NetCards.Api.Core.Managers;
 using NetCards.Api.Core.Services.RandomService;
 
 namespace NetCards.Api.Core.Services.DeckService
@@ -70,6 +72,26 @@ namespace NetCards.Api.Core.Services.DeckService
             }
 
             return result;
+        }
+
+        public void ShuffleDeck(DeckInformation deck)
+        {
+            int n = deck.Cards.Count;  
+            while (n > 1) {  
+                n--;  
+                int k = _randomService.NextInt(n + 1);  
+                var value = deck.Cards[k];  
+                deck.Cards[k] = deck.Cards[n];  
+                deck.Cards[n] = value;  
+            } 
+            deck.Shuffled = true;
+        }
+
+        public List<CardEntity> DrawCards(DeckInformation deck, int count)
+        {
+            List<CardEntity> results = deck.Cards.Take(count).ToList();
+            deck.Cards.RemoveRange(0, count);
+            return results;
         }
     }
 }

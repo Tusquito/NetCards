@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,7 +8,6 @@ using NetCards.Api.Core.Managers;
 using NetCards.Api.Core.Services.DeckService;
 using NetCards.Api.Core.Services.RandomService;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace NetCards.Api.Core
 {
@@ -21,12 +20,10 @@ namespace NetCards.Api.Core
                 .AddJsonOptions(x =>
                 {
                     x.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
-                    x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                 })
                 .AddNewtonsoftJson(x =>
                 {
                     x.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Include;
-                    x.SerializerSettings.Converters.Add(new StringEnumConverter());
                 });;
             services.AddSwaggerGen(c =>
             {

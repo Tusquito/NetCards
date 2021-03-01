@@ -45,6 +45,7 @@ namespace NetCards.Api.Core.Managers
         public string Id { get; init; }
         public DateTime LastUpdate { get; set; }
         public List<CardEntity> Cards { get; init; }
+        public bool Shuffled { get; set; }
         public int RemainingCards => Cards.Count;
     }
 }
