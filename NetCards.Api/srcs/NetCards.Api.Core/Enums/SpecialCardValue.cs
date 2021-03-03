@@ -2,13 +2,12 @@
 
 namespace NetCards.Api.Core.Enums
 {
-    [Flags]
     public enum SpecialCardValue
     {
-        JACK = 1 << 0,
-        QUEEN = 1 << 1,
-        KING = 1 << 2,
-        ACE = 1 << 3, 
-        NONE = 0
+        JACK =  0,
+        QUEEN = 1,
+        KING = 2,
+        ACE = 3, 
+        NONE = -1
     }
 }

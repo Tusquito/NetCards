@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NetCards.Api.Core.Entities;
@@ -24,7 +25,7 @@ namespace NetCards.Api.Core.Controllers
         }
 
         [HttpPost("new/")]
-        public async Task<ActionResult<BasicResponse>> CreateNewDeckAsync(int deckCount, bool jokerEnabled = false)
+        public async Task<ActionResult<BasicResponse>> CreateNewDeckAsync(int deckCount = 1, bool jokerEnabled = false)
         {
             DeckInformation deckInformation = new DeckInformation
             {
@@ -66,10 +67,21 @@ namespace NetCards.Api.Core.Controllers
                 {
                     Status = ErrorCode.DECK_ID_NOT_FOUND,
                     Message = ErrorCode.DECK_ID_NOT_FOUND.ToString(),
+                    Details = "The deck id provided doesn't exist or has expired, please create a new one."
                 }));
             }
 
             var deck = _deckManager.Get(deckId);
+            
+            if (!deck.Cards.Any())
+            {
+                return BadRequest(new BasicResponse(new ErrorEntity
+                {
+                    Status = ErrorCode.EMPTY_DECK,
+                    Message = ErrorCode.EMPTY_DECK.ToString(),
+                    Details = "The deck is empty."
+                }));
+            }
             if (cardsCount < 0 || cardsCount > deck.Cards.Count)
             {
                 return BadRequest(new BasicResponse(new ErrorEntity

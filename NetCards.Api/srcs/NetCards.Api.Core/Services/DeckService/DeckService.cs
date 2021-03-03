@@ -38,7 +38,7 @@ namespace NetCards.Api.Core.Services.DeckService
             {
                 for (int j = 0; j < suitTypeValues.Length - 1; j++)
                 {
-                    for (int h = 2; h < 10; h++)
+                    for (int h = 2; h < 11; h++)
                     {
                         result.Add(new CardEntity
                         {
@@ -47,7 +47,7 @@ namespace NetCards.Api.Core.Services.DeckService
                         });
                     }
 
-                    for (int k = 0; k < specialCardValues.Length; k++)
+                    for (int k = 0; k < specialCardValues.Length - 1; k++)
                     {
                         SpecialCardValue cardValue = (SpecialCardValue) (specialCardValues.GetValue(k) ?? SpecialCardValue.NONE);
                         result.Add(new CardEntity
